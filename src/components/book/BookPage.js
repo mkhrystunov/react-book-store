@@ -20,16 +20,16 @@ class Book extends React.Component {
           <h3>Books</h3>
           <table className="table">
             <thead>
-            <th>
-              <td>Title</td>
-              <td></td>
-            </th>
+            <tr>
+              <th>Title</th>
+              <th></th>
+            </tr>
             </thead>
             <tbody>
             {this.props.books.map((b, i) => (
               <tr key={i}>
                 <td>{b.title}</td>
-                <td><Link to={`/books${b.id}`}>View</Link></td>
+                <td><Link to={`/books/${b.id}`}>View</Link></td>
               </tr>
             ))}
             </tbody>
